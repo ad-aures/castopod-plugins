@@ -1,0 +1,27 @@
+{
+  "name": "ad-aures/owner-email-remover",
+  "version": "0.1.0",
+  "description": "Remove all occurrences of owner email from the RSS feed.",
+  "license": "AGPL-3.0-or-later",
+  "repository": {
+    "url": "https://github.com/ad-aures/castopod-plugins",
+    "directory": "owner-email-remover"
+  },
+  "authors": [
+    {
+      "name": "Yassine Doghri",
+      "url": "https://yassinedoghri.com/"
+    }
+  ],
+  "keywords": ["podcasting2", "privacy"],
+  "hooks": ["rssAfterChannel"],
+  "settings": {
+    "podcast": {
+      "unhide-owner-email": {
+        "type": "toggler",
+        "label": "Unhide owner email in the public RSS feed",
+        "helper": "You may need to temporarily unhide the email so that a directory can verify your podcast ownership. Make sure to toggle this off afterwards!"
+      }
+    }
+  }
+}
