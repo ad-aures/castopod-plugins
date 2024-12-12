@@ -1,0 +1,18 @@
+{
+  "name": "ad-aures/podcast-images",
+  "version": "0.1.0",
+  "description": "Add multiple image resources for the podcast in your RSS feeds using `<podcast:images>`'s Podcasting2.0 tag.",
+  "license": "AGPL-3.0-or-later",
+  "repository": {
+    "url": "https://github.com/ad-aures/castopod-plugins",
+    "directory": "podcast-images"
+  },
+  "authors": [
+    {
+      "name": "Yassine Doghri",
+      "url": "https://yassinedoghri.com/"
+    }
+  ],
+  "keywords": ["podcasting2"],
+  "hooks": ["rssAfterChannel", "rssAfterItem"]
+}

@@ -1,0 +1,171 @@
+{
+  "name": "ad-aures/foo",
+  "version": "0.1.0",
+  "description": "A dummy plugin that pities the foo! It serves as a showcase for displaying every form field type and testing them out.",
+  "license": "AGPL-3.0-or-later",
+  "repository": {
+    "url": "https://github.com/ad-aures/castopod-plugins",
+    "directory": "foo"
+  },
+  "authors": [
+    {
+      "name": "Yassine Doghri",
+      "url": "https://yassinedoghri.com/"
+    }
+  ],
+  "hooks": ["rssAfterChannel"],
+  "settings": {
+    "general": {
+      "checkbox": {
+        "type": "checkbox",
+        "label": "Checkbox",
+        "hint": "Check this box if applicable",
+        "helper": "Use this to confirm or select an option"
+      },
+      "datetime": {
+        "type": "datetime",
+        "label": "Datetime",
+        "hint": "Select a date and time",
+        "helper": "Use the calendar picker to choose a specific datetime"
+      },
+      "email": {
+        "type": "email",
+        "label": "Email",
+        "hint": "Enter your email address",
+        "helper": "This will be used for correspondence"
+      },
+      "group": {
+        "type": "group",
+        "label": "Group",
+        "hint": "This is a group of related fields",
+        "helper": "Please complete all fields within this group",
+        "fields": {
+          "text": {
+            "type": "text",
+            "label": "Text",
+            "hint": "Provide text input",
+            "helper": "Enter the necessary information"
+          },
+          "number": {
+            "type": "number",
+            "label": "Number",
+            "hint": "Input a numeric value",
+            "helper": "Only numbers are allowed in this field"
+          }
+        }
+      },
+      "markdown": {
+        "type": "markdown",
+        "label": "Markdown",
+        "hint": "Enter markdown-formatted text",
+        "helper": "Use proper markdown syntax for better formatting"
+      },
+      "number": {
+        "type": "number",
+        "label": "Number",
+        "hint": "Provide a number",
+        "helper": "Ensure the value is numeric"
+      },
+      "radio-group": {
+        "type": "radio-group",
+        "label": "Radio Group",
+        "hint": "Select one option from the list",
+        "helper": "Only one option can be selected",
+        "options": {
+          "option1": {
+            "label": "Option 1",
+            "description": "This is the first option"
+          },
+          "option2": {
+            "label": "Option 2",
+            "description": "This is the second option"
+          }
+        }
+      },
+      "select": {
+        "type": "select",
+        "label": "Select",
+        "hint": "Pick an option from the dropdown",
+        "helper": "Only one option can be selected",
+        "options": {
+          "option1": {
+            "label": "Option 1",
+            "description": "This is the first selectable option"
+          },
+          "option2": {
+            "label": "Option 2",
+            "description": "This is the second selectable option"
+          }
+        }
+      },
+      "select-multiple": {
+        "type": "select-multiple",
+        "label": "Select Multiple",
+        "hint": "Select one or more options",
+        "helper": "Hold Ctrl (Cmd on Mac) to select multiple values",
+        "options": {
+          "option1": {
+            "label": "Option 1",
+            "description": "First option for selection"
+          },
+          "option2": {
+            "label": "Option 2",
+            "description": "Second option for selection"
+          }
+        }
+      },
+      "text": {
+        "type": "text",
+        "label": "Text",
+        "hint": "Input text here",
+        "helper": "Provide the required details in text format"
+      },
+      "textarea": {
+        "type": "textarea",
+        "label": "Textarea",
+        "hint": "Enter multiline text",
+        "helper": "Use this for longer descriptions or comments"
+      },
+      "toggler": {
+        "type": "toggler",
+        "label": "Toggler",
+        "hint": "Switch between on and off states",
+        "helper": "Toggle this option to activate or deactivate it"
+      },
+      "url": {
+        "type": "url",
+        "label": "URL",
+        "hint": "Provide a valid web address",
+        "helper": "Ensure the URL includes http:// or https://"
+      },
+      "text-multiple": {
+        "type": "text",
+        "label": "Text multiple",
+        "hint": "Enter multiple text values",
+        "helper": "You can add more entries if needed",
+        "multiple": true
+      },
+      "group-multiple": {
+        "type": "group",
+        "label": "Group multiple",
+        "hint": "A group of repeatable fields",
+        "helper": "Fill out each group with the relevant information",
+        "multiple": true,
+        "fields": {
+          "text": {
+            "type": "text",
+            "label": "Text",
+            "hint": "Enter text for this group",
+            "helper": "Provide the specific text value for this group"
+          },
+          "number": {
+            "type": "number",
+            "label": "Number",
+            "hint": "Provide a number for this group",
+            "helper": "Enter the numeric value for this group"
+          }
+        }
+      }
+    }
+  }
+}

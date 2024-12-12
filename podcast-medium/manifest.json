@@ -1,0 +1,40 @@
+{
+  "name": "ad-aures/podcast-medium",
+  "version": "0.1.0",
+  "description": "Specify the type of medium your RSS feed holds.",
+  "license": "AGPL-3.0-or-later",
+  "repository": {
+    "url": "https://github.com/ad-aures/castopod-plugins",
+    "directory": "podcast-medium"
+  },
+  "authors": [
+    {
+      "name": "Yassine Doghri",
+      "url": "https://yassinedoghri.com/"
+    }
+  ],
+  "keywords": ["podcasting2"],
+  "hooks": ["rssAfterChannel"],
+  "settings": {
+    "podcast": {
+      "medium": {
+        "type": "radio-group",
+        "label": "Medium",
+        "options": {
+          "podcast": {
+            "label": "Podcast",
+            "description": "Describes a feed for a podcast show."
+          },
+          "music": {
+            "label": "Music",
+            "description": "A feed of music organized into an \"album\" with each item a song within the album."
+          },
+          "audiobook": {
+            "label": "Audiobook",
+            "description": "Specific types of audio with one item per feed, or where items represent chapters within the book."
+          }
+        }
+      }
+    }
+  }
+}

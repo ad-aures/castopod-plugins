@@ -1,0 +1,18 @@
+{
+  "name": "ad-aures/podcast-episode-season",
+  "version": "0.1.0",
+  "description": "Indicate the podcast's episode and season number and names.",
+  "license": "AGPL-3.0-or-later",
+  "repository": {
+    "url": "https://github.com/ad-aures/castopod-plugins",
+    "directory": "podcast-episode-season"
+  },
+  "authors": [
+    {
+      "name": "Yassine Doghri",
+      "url": "https://yassinedoghri.com/"
+    }
+  ],
+  "keywords": ["podcasting2", "seo"],
+  "hooks": ["rssAfterItem"]
+}

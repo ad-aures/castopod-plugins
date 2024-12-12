@@ -1,0 +1,391 @@
+{
+  "name": "ad-aures/podcast-block",
+  "version": "0.1.0",
+  "description": "Express which platforms are allowed to publicly display your feed and its contents.",
+  "license": "AGPL-3.0-or-later",
+  "repository": {
+    "url": "https://github.com/ad-aures/castopod-plugins",
+    "directory": "podcast-block"
+  },
+  "authors": [
+    {
+      "name": "Yassine Doghri",
+      "url": "https://yassinedoghri.com/"
+    }
+  ],
+  "keywords": ["podcasting2", "privacy"],
+  "hooks": ["rssAfterChannel"],
+  "settings": {
+    "podcast": {
+      "blocked-platforms": {
+        "type": "select-multiple",
+        "label": "Blocked Platforms",
+        "helper": "Select one or multiple platforms to block.",
+        "optional": true,
+        "options": {
+          "acast": {
+            "label": "Acast"
+          },
+          "amazon": {
+            "label": "Amazon"
+          },
+          "anchor": {
+            "label": "Anchor"
+          },
+          "apple": {
+            "label": "Apple"
+          },
+          "audible": {
+            "label": "Audible"
+          },
+          "audioboom": {
+            "label": "Audioboom"
+          },
+          "backtracks": {
+            "label": "Backtracks"
+          },
+          "bitcoin": {
+            "label": "Bitcoin"
+          },
+          "blubrry": {
+            "label": "Blubrry"
+          },
+          "buzzsprout": {
+            "label": "Buzzsprout"
+          },
+          "captivate": {
+            "label": "Captivate"
+          },
+          "castos": {
+            "label": "Castos"
+          },
+          "castopod": {
+            "label": "Castopod"
+          },
+          "facebook": {
+            "label": "Facebook"
+          },
+          "fireside": {
+            "label": "Fireside"
+          },
+          "fyyd": {
+            "label": "Fyyd"
+          },
+          "google": {
+            "label": "Google"
+          },
+          "gpodder": {
+            "label": "gPodder"
+          },
+          "hypercatcher": {
+            "label": "HyperCatcher"
+          },
+          "kasts": {
+            "label": "Kasts"
+          },
+          "libsyn": {
+            "label": "Libsyn"
+          },
+          "mastodon": {
+            "label": "Mastodon"
+          },
+          "megafono": {
+            "label": "Megafono"
+          },
+          "megaphone": {
+            "label": "Megaphone"
+          },
+          "omnystudio": {
+            "label": "Omny Studio"
+          },
+          "overcast": {
+            "label": "Overcast"
+          },
+          "paypal": {
+            "label": "Paypal"
+          },
+          "pinecast": {
+            "label": "Pinecast"
+          },
+          "podbean": {
+            "label": "Podbean"
+          },
+          "podcastaddict": {
+            "label": "Podcast Addict"
+          },
+          "podcastguru": {
+            "label": "Podcast Guru"
+          },
+          "podcastindex": {
+            "label": "Podcast Index"
+          },
+          "podcasts": {
+            "label": "Podcasts"
+          },
+          "podchaser": {
+            "label": "Podchaser"
+          },
+          "podcloud": {
+            "label": "podCloud"
+          },
+          "podfriend": {
+            "label": "Podfriend"
+          },
+          "podiant": {
+            "label": "Podiant"
+          },
+          "podigee": {
+            "label": "Podigee"
+          },
+          "podnews": {
+            "label": "Podnews"
+          },
+          "podomatic": {
+            "label": "Podomatic"
+          },
+          "podserve": {
+            "label": "PodServe"
+          },
+          "podverse": {
+            "label": "Podverse"
+          },
+          "redcircle": {
+            "label": "RedCircle"
+          },
+          "relay": {
+            "label": "Relay"
+          },
+          "resonaterecordings": {
+            "label": "Resonate Recordings"
+          },
+          "rss": {
+            "label": "Rss"
+          },
+          "shoutengine": {
+            "label": "ShoutEngine"
+          },
+          "simplecast": {
+            "label": "Simplecast"
+          },
+          "slack": {
+            "label": "Slack"
+          },
+          "soundcloud": {
+            "label": "SoundCloud"
+          },
+          "spotify": {
+            "label": "Spotify"
+          },
+          "spreaker": {
+            "label": "Spreaker"
+          },
+          "tiktok": {
+            "label": "TikTok"
+          },
+          "transistor": {
+            "label": "Transistor"
+          },
+          "twitter": {
+            "label": "Twitter"
+          },
+          "whooshkaa": {
+            "label": "Whooshkaa"
+          },
+          "youtube": {
+            "label": "YouTube"
+          },
+          "zencast": {
+            "label": "ZenCast"
+          }
+        }
+      },
+      "allowed-platforms": {
+        "type": "select-multiple",
+        "label": "Allowed platforms",
+        "helper": "Select one or more platforms to allow. This takes precedence over blocks, meaning that all platforms will be blocked except the ones you allow.",
+        "optional": true,
+        "options": {
+          "acast": {
+            "label": "Acast"
+          },
+          "amazon": {
+            "label": "Amazon"
+          },
+          "anchor": {
+            "label": "Anchor"
+          },
+          "apple": {
+            "label": "Apple"
+          },
+          "audible": {
+            "label": "Audible"
+          },
+          "audioboom": {
+            "label": "Audioboom"
+          },
+          "backtracks": {
+            "label": "Backtracks"
+          },
+          "bitcoin": {
+            "label": "Bitcoin"
+          },
+          "blubrry": {
+            "label": "Blubrry"
+          },
+          "buzzsprout": {
+            "label": "Buzzsprout"
+          },
+          "captivate": {
+            "label": "Captivate"
+          },
+          "castos": {
+            "label": "Castos"
+          },
+          "castopod": {
+            "label": "Castopod"
+          },
+          "facebook": {
+            "label": "Facebook"
+          },
+          "fireside": {
+            "label": "Fireside"
+          },
+          "fyyd": {
+            "label": "Fyyd"
+          },
+          "google": {
+            "label": "Google"
+          },
+          "gpodder": {
+            "label": "gPodder"
+          },
+          "hypercatcher": {
+            "label": "HyperCatcher"
+          },
+          "kasts": {
+            "label": "Kasts"
+          },
+          "libsyn": {
+            "label": "Libsyn"
+          },
+          "mastodon": {
+            "label": "Mastodon"
+          },
+          "megafono": {
+            "label": "Megafono"
+          },
+          "megaphone": {
+            "label": "Megaphone"
+          },
+          "omnystudio": {
+            "label": "Omny Studio"
+          },
+          "overcast": {
+            "label": "Overcast"
+          },
+          "paypal": {
+            "label": "Paypal"
+          },
+          "pinecast": {
+            "label": "Pinecast"
+          },
+          "podbean": {
+            "label": "Podbean"
+          },
+          "podcastaddict": {
+            "label": "Podcast Addict"
+          },
+          "podcastguru": {
+            "label": "Podcast Guru"
+          },
+          "podcastindex": {
+            "label": "Podcast Index"
+          },
+          "podcasts": {
+            "label": "Podcasts"
+          },
+          "podchaser": {
+            "label": "Podchaser"
+          },
+          "podcloud": {
+            "label": "podCloud"
+          },
+          "podfriend": {
+            "label": "Podfriend"
+          },
+          "podiant": {
+            "label": "Podiant"
+          },
+          "podigee": {
+            "label": "Podigee"
+          },
+          "podnews": {
+            "label": "Podnews"
+          },
+          "podomatic": {
+            "label": "Podomatic"
+          },
+          "podserve": {
+            "label": "PodServe"
+          },
+          "podverse": {
+            "label": "Podverse"
+          },
+          "redcircle": {
+            "label": "RedCircle"
+          },
+          "relay": {
+            "label": "Relay"
+          },
+          "resonaterecordings": {
+            "label": "Resonate Recordings"
+          },
+          "rss": {
+            "label": "Rss"
+          },
+          "shoutengine": {
+            "label": "ShoutEngine"
+          },
+          "simplecast": {
+            "label": "Simplecast"
+          },
+          "slack": {
+            "label": "Slack"
+          },
+          "soundcloud": {
+            "label": "SoundCloud"
+          },
+          "spotify": {
+            "label": "Spotify"
+          },
+          "spreaker": {
+            "label": "Spreaker"
+          },
+          "tiktok": {
+            "label": "TikTok"
+          },
+          "transistor": {
+            "label": "Transistor"
+          },
+          "twitter": {
+            "label": "Twitter"
+          },
+          "whooshkaa": {
+            "label": "Whooshkaa"
+          },
+          "youtube": {
+            "label": "YouTube"
+          },
+          "zencast": {
+            "label": "ZenCast"
+          }
+        }
+      },
+      "block-all": {
+        "label": "Block all platforms from publicly displaying my feed",
+        "helper": "By toggling this on, you block everything. This takes precendence over any specific blocks or allows.",
+        "type": "toggler"
+      }
+    }
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "name": "ad-aures/podcast-license",
+  "version": "0.1.0",
+  "description": "A Castopod plugin to indicate the podcast's license.",
+  "license": "AGPL-3.0-or-later",
+  "repository": {
+    "url": "https://github.com/ad-aures/castopod-plugins",
+    "directory": "podcast-license"
+  },
+  "authors": [
+    {
+      "name": "Yassine Doghri",
+      "url": "https://yassinedoghri.com/"
+    }
+  ],
+  "keywords": ["podcasting2", "privacy"],
+  "hooks": ["rssAfterChannel"],
+  "settings": {
+    "podcast": {
+      "podcast-license": {
+        "label": "Podcast License",
+        "type": "select",
+        "options": {
+          "ARR": {
+            "label": "All Rights Reserved",
+            "description": "The copyright holder reserves, or holds for their own use, all the rights provided by copyright law, such as distribution, performance, and creation of derivative works; that is, they have not waived any such right."
+          },
+          "CC-BY-4.0": {
+            "label": "Creative Commons Attribution",
+            "description": "You are free to copy and redistribute the material in any medium or format for any purpose, even commercially. You are free to remix, transform, and build upon the material for any purpose, even commercially. You must give appropriate credit , provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use."
+          },
+          "CC-BY-NC-4.0": {
+            "label": "Creative Commons Attribution - NonCommercial",
+            "description": "You are free to copy and redistribute the material in any medium or format. You are free to remix, transform, and build upon the material. You must give appropriate credit , provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use."
+          },
+          "CC-BY-NC-ND-4.0": {
+            "label": "Creative Commons Attribution - NonCommercial - NoDerivs",
+            "description": "You are free to copy and redistribute the material in any medium or format. You must give appropriate credit , provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use."
+          },
+          "POD-V4V-1.0": {
+            "label": "Podcast V4V License"
+          }
+        }
+      }
+    }
+  }
+}
