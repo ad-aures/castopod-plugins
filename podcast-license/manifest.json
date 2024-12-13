@@ -17,7 +17,7 @@
   "hooks": ["rssAfterChannel"],
   "settings": {
     "podcast": {
-      "podcast-license": {
+      "license": {
         "label": "Podcast License",
         "type": "select",
         "options": {

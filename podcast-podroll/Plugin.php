@@ -3,12 +3,12 @@
 declare(strict_types=1);
 
 use App\Entities\Podcast;
-use App\Libraries\SimpleRSSElement;
+use App\Libraries\RssFeed;
 use Modules\Plugins\Core\BasePlugin;
 
 class AdAuresPodcastPodrollPlugin extends BasePlugin
 {
-    public function rssAfterChannel(Podcast $podcast, SimpleRSSElement $channel): void
+    public function rssAfterChannel(Podcast $podcast, RssFeed $channel): void
     {
         $feedGUIDs = $this->getPodcastSetting($podcast->id, 'feed-guids');
 
@@ -16,10 +16,10 @@ class AdAuresPodcastPodrollPlugin extends BasePlugin
             return;
         }
 
-        $podroll = $channel->addChild('podroll', null, 'https://podcastindex.org/namespace/1.0');
+        $podroll = $channel->addChild('podroll', null, RssFeed::PODCAST_NAMESPACE);
 
         foreach ($feedGUIDs as $feedGUID) {
-            $remoteItem = $podroll->addChild('remoteItem', null, 'https://podcastindex.org/namespace/1.0');
+            $remoteItem = $podroll->addChild('remoteItem', null, RssFeed::PODCAST_NAMESPACE);
             $remoteItem->addAttribute('feedGuid', $feedGUID);
         }
     }

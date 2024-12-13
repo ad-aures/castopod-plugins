@@ -4,17 +4,17 @@ declare(strict_types=1);
 
 use App\Entities\Episode;
 use App\Entities\Podcast;
-use App\Libraries\SimpleRSSElement;
+use App\Libraries\RssFeed;
 use Modules\Plugins\Core\BasePlugin;
 
 class AdAuresPodcastTxtPlugin extends BasePlugin
 {
-    public function rssAfterChannel(Podcast $podcast, SimpleRSSElement $channel): void
+    public function rssAfterChannel(Podcast $podcast, RssFeed $channel): void
     {
         $txts = $this->getPodcastSetting($podcast->id, 'txt') ?? [];
 
         foreach ($txts as $txt) {
-            $record = $channel->addChild('txt', $txt['value'], 'https://podcastindex.org/namespace/1.0');
+            $record = $channel->addChild('txt', $txt['value'], RssFeed::PODCAST_NAMESPACE);
 
             if (array_key_exists('purpose', $txt)) {
                 $record->addAttribute('purpose', $txt['purpose']);
@@ -22,12 +22,12 @@ class AdAuresPodcastTxtPlugin extends BasePlugin
         }
     }
 
-    public function rssAfterItem(Episode $episode, SimpleRSSElement $item): void
+    public function rssAfterItem(Episode $episode, RssFeed $item): void
     {
         $txts = $this->getEpisodeSetting($episode->id, 'txt') ?? [];
 
         foreach ($txts as $txt) {
-            $record = $item->addChild('txt', $txt['value'], 'https://podcastindex.org/namespace/1.0');
+            $record = $item->addChild('txt', $txt['value'], RssFeed::PODCAST_NAMESPACE);
 
             if (array_key_exists('purpose', $txt)) {
                 $record->addAttribute('purpose', $txt['purpose']);

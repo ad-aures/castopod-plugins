@@ -1,0 +1,31 @@
+{
+  "name": "ad-aures/custom-rss",
+  "version": "0.1.0",
+  "description": "Inject custom RSS to your feed's channel and items.",
+  "license": "AGPL-3.0-or-later",
+  "repository": {
+    "url": "https://github.com/ad-aures/castopod-plugins",
+    "directory": "owner-email-remover"
+  },
+  "authors": [
+    {
+      "name": "Yassine Doghri",
+      "url": "https://yassinedoghri.com/"
+    }
+  ],
+  "hooks": ["rssAfterChannel", "rssAfterItem"],
+  "settings": {
+    "podcast": {
+      "custom-rss": {
+        "type": "rss",
+        "label": "Custom RSS"
+      }
+    },
+    "episode": {
+      "custom-rss": {
+        "type": "rss",
+        "label": "Custom RSS"
+      }
+    }
+  }
+}

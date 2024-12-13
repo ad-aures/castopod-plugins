@@ -4,12 +4,12 @@ declare(strict_types=1);
 
 use App\Entities\Episode;
 use App\Entities\Podcast;
-use App\Libraries\SimpleRSSElement;
+use App\Libraries\RssFeed;
 use Modules\Plugins\Core\BasePlugin;
 
 class AdAuresPodcastImagesPlugin extends BasePlugin
 {
-    public function rssAfterChannel(Podcast $podcast, SimpleRSSElement $channel): void
+    public function rssAfterChannel(Podcast $podcast, RssFeed $channel): void
     {
         $srcSet = sprintf(
             '%s %s, %s %s, %s %s, %s %s, %s %s',
@@ -25,11 +25,11 @@ class AdAuresPodcastImagesPlugin extends BasePlugin
             $podcast->cover->tiny_width . 'w',
         );
 
-        $images = $channel->addChild('images', null, 'https://podcastindex.org/namespace/1.0');
+        $images = $channel->addChild('images', null, RssFeed::PODCAST_NAMESPACE);
         $images->addAttribute('srcset', $srcSet);
     }
 
-    public function rssAfterItem(Episode $episode, SimpleRSSElement $item): void
+    public function rssAfterItem(Episode $episode, RssFeed $item): void
     {
         $srcSet = sprintf(
             '%s %s, %s %s, %s %s, %s %s, %s %s',
@@ -45,7 +45,7 @@ class AdAuresPodcastImagesPlugin extends BasePlugin
             $episode->cover->tiny_width . 'w',
         );
 
-        $images = $item->addChild('images', null, 'https://podcastindex.org/namespace/1.0');
+        $images = $item->addChild('images', null, RssFeed::PODCAST_NAMESPACE);
         $images->addAttribute('srcset', $srcSet);
     }
 }
