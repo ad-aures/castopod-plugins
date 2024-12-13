@@ -14,7 +14,7 @@ class AdAuresCustomRssPlugin extends BasePlugin
     {
         /** @var ?RSS $customRSS */
         $customRSS = $this->getPodcastSetting($podcast->id, 'custom-rss');
-        
+
         if ($customRSS === null) {
             return;
         }
@@ -31,7 +31,7 @@ class AdAuresCustomRssPlugin extends BasePlugin
     {
         /** @var ?RSS $customRSS */
         $customRSS = $this->getEpisodeSetting($episode->id, 'custom-rss');
-        
+
         if ($customRSS === null) {
             return;
         }

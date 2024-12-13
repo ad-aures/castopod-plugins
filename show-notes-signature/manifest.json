@@ -1,0 +1,27 @@
+{
+  "name": "ad-aures/show-notes-signature",
+  "version": "0.1.0",
+  "description": "Add a signature to all your episodes show notes, a great way to include your social links in one go!",
+  "license": "AGPL-3.0-or-later",
+  "repository": {
+    "url": "https://github.com/ad-aures/castopod-plugins",
+    "directory": "show-notes-signature"
+  },
+  "authors": [
+    {
+      "name": "Yassine Doghri",
+      "url": "https://yassinedoghri.com/"
+    }
+  ],
+  "keywords": ["productivity"],
+  "hooks": ["rssBeforeItem"],
+  "settings": {
+    "podcast": {
+      "show-notes-signature": {
+        "type": "markdown",
+        "label": "Show notes signature",
+        "helper": "The content your write here will be included at the end of all of your episodes show notes. This is a great place to include your social links!"
+      }
+    }
+  }
+}
