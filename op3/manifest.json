@@ -1,0 +1,26 @@
+{
+  "name": "ad-aures/op3",
+  "version": "0.1.0",
+  "description": "Prefix your episodes url with the Open Podcast Prefix Project (OP3) analytics service.",
+  "license": "AGPL-3.0-or-later",
+  "repository": {
+    "url": "https://github.com/ad-aures/castopod-plugins",
+    "directory": "op3"
+  },
+  "authors": [
+    {
+      "name": "Yassine Doghri",
+      "url": "https://yassinedoghri.com/"
+    }
+  ],
+  "keywords": ["podcasting2", "analytics"],
+  "hooks": ["rssBeforeItem"],
+  "settings": {
+    "podcast": {
+      "disable": {
+        "type": "toggler",
+        "label": "Disable OP3 analytics for this podcast"
+      }
+    }
+  }
+}
