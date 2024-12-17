@@ -1,0 +1,27 @@
+{
+  "name": "ad-aures/custom-head",
+  "version": "0.1.0",
+  "description": "Add code snippets in the `<head>` tag of all public pages: inject new meta tags, custom styles, or third-party scripts!",
+  "license": "AGPL-3.0-or-later",
+  "repository": {
+    "url": "https://github.com/ad-aures/castopod-plugins",
+    "directory": "custom-head"
+  },
+  "authors": [
+    {
+      "name": "Yassine Doghri",
+      "url": "https://yassinedoghri.com/"
+    }
+  ],
+  "hooks": ["siteHead"],
+  "settings": {
+    "general": {
+      "custom-head": {
+        "type": "html",
+        "label": "Custom head",
+        "helper": "The HTML code you enter here will be added to the <head> tag of all public pages. This can be used to add meta tags, custom styles, or third-party scripts.",
+        "optional": true
+      }
+    }
+  }
+}

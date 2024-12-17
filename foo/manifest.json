@@ -82,6 +82,18 @@
           }
         }
       },
+      "rss": {
+        "type": "rss",
+        "label": "RSS editor",
+        "hint": "Enter a valid RSS feed URL.",
+        "helper": "Use this editor to input XML code for the RSS feed. Ensure the XML structure is valid."
+      },
+      "html": {
+        "type": "html",
+        "label": "HTML editor",
+        "hint": "Write or paste HTML content here.",
+        "helper": "This editor supports basic HTML tags. Ensure the syntax is correct for proper rendering."
+      },
       "select": {
         "type": "select",
         "label": "Select",
