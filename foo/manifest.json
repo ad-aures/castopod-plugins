@@ -20,19 +20,22 @@
         "type": "checkbox",
         "label": "Checkbox",
         "hint": "Check this box if applicable",
-        "helper": "Use this to confirm or select an option"
+        "helper": "Use this to confirm or select an option",
+        "defaultValue": true
       },
       "datetime": {
         "type": "datetime",
         "label": "Datetime",
         "hint": "Select a date and time",
-        "helper": "Use the calendar picker to choose a specific datetime"
+        "helper": "Use the calendar picker to choose a specific datetime",
+        "defaultValue": "2022-07-07T16:34:00+00:00"
       },
       "email": {
         "type": "email",
         "label": "Email",
         "hint": "Enter your email address",
-        "helper": "This will be used for correspondence"
+        "helper": "This will be used for correspondence",
+        "defaultValue": "john.doe@example.com"
       },
       "group": {
         "type": "group",
@@ -44,13 +47,15 @@
             "type": "text",
             "label": "Text",
             "hint": "Provide text input",
-            "helper": "Enter the necessary information"
+            "helper": "Enter the necessary information",
+            "defaultValue": "Sample group text"
           },
           "number": {
             "type": "number",
             "label": "Number",
             "hint": "Input a numeric value",
-            "helper": "Only numbers are allowed in this field"
+            "helper": "Only numbers are allowed in this field",
+            "defaultValue": 42
           }
         }
       },
@@ -58,19 +63,22 @@
         "type": "markdown",
         "label": "Markdown",
         "hint": "Enter markdown-formatted text",
-        "helper": "Use proper markdown syntax for better formatting"
+        "helper": "Use proper markdown syntax for better formatting",
+        "defaultValue": "### Welcome\nThis is a markdown **example**!"
       },
       "number": {
         "type": "number",
         "label": "Number",
         "hint": "Provide a number",
-        "helper": "Ensure the value is numeric"
+        "helper": "Ensure the value is numeric",
+        "defaultValue": 10
       },
       "radio-group": {
         "type": "radio-group",
         "label": "Radio Group",
         "hint": "Select one option from the list",
         "helper": "Only one option can be selected",
+        "defaultValue": "option1",
         "options": {
           "option1": {
             "label": "Option 1",
@@ -86,19 +94,22 @@
         "type": "rss",
         "label": "RSS editor",
         "hint": "Enter a valid RSS feed URL.",
-        "helper": "Use this editor to input XML code for the RSS feed. Ensure the XML structure is valid."
+        "helper": "Use this editor to input XML code for the RSS feed. Ensure the XML structure is valid.",
+        "defaultValue": "<rss version=\"2.0\"><channel><title>Example Feed</title></channel></rss>"
       },
       "html": {
         "type": "html",
         "label": "HTML editor",
         "hint": "Write or paste HTML content here.",
-        "helper": "This editor supports basic HTML tags. Ensure the syntax is correct for proper rendering."
+        "helper": "This editor supports basic HTML tags. Ensure the syntax is correct for proper rendering.",
+        "defaultValue": "<div><p>Hello, world!</p></div>"
       },
       "select": {
         "type": "select",
         "label": "Select",
         "hint": "Pick an option from the dropdown",
         "helper": "Only one option can be selected",
+        "defaultValue": "option1",
         "options": {
           "option1": {
             "label": "Option 1",
@@ -115,6 +126,7 @@
         "label": "Select Multiple",
         "hint": "Select one or more options",
         "helper": "Hold Ctrl (Cmd on Mac) to select multiple values",
+        "defaultValue": ["option1", "option2"],
         "options": {
           "option1": {
             "label": "Option 1",
@@ -130,32 +142,37 @@
         "type": "text",
         "label": "Text",
         "hint": "Input text here",
-        "helper": "Provide the required details in text format"
+        "helper": "Provide the required details in text format",
+        "defaultValue": "Example text input"
       },
       "textarea": {
         "type": "textarea",
         "label": "Textarea",
         "hint": "Enter multiline text",
-        "helper": "Use this for longer descriptions or comments"
+        "helper": "Use this for longer descriptions or comments",
+        "defaultValue": "This is a sample text area for input."
       },
       "toggler": {
         "type": "toggler",
         "label": "Toggler",
         "hint": "Switch between on and off states",
-        "helper": "Toggle this option to activate or deactivate it"
+        "helper": "Toggle this option to activate or deactivate it",
+        "defaultValue": false
       },
       "url": {
         "type": "url",
         "label": "URL",
         "hint": "Provide a valid web address",
-        "helper": "Ensure the URL includes http:// or https://"
+        "helper": "Ensure the URL includes http:// or https://",
+        "defaultValue": "https://www.example.com"
       },
       "text-multiple": {
         "type": "text",
         "label": "Text multiple",
         "hint": "Enter multiple text values",
         "helper": "You can add more entries if needed",
-        "multiple": true
+        "multiple": true,
+        "defaultValue": "First example,Second example"
       },
       "group-multiple": {
         "type": "group",
@@ -168,13 +185,15 @@
             "type": "text",
             "label": "Text",
             "hint": "Enter text for this group",
-            "helper": "Provide the specific text value for this group"
+            "helper": "Provide the specific text value for this group",
+            "defaultValue": "Group example text"
           },
           "number": {
             "type": "number",
             "label": "Number",
             "hint": "Provide a number for this group",
-            "helper": "Enter the numeric value for this group"
+            "helper": "Enter the numeric value for this group",
+            "defaultValue": 100
           }
         }
       }

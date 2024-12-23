@@ -20,10 +20,11 @@
       "medium": {
         "type": "radio-group",
         "label": "Medium",
+        "defaultValue": "podcast",
         "options": {
           "podcast": {
             "label": "Podcast",
-            "description": "Describes a feed for a podcast show."
+            "description": "Describes a feed for a podcast show with each item being an episode."
           },
           "music": {
             "label": "Music",
