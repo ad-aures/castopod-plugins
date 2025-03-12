@@ -17,7 +17,7 @@ class AdAuresPodcastLicensePlugin extends BasePlugin
             'CC-BY-NC-4.0'    => 'CC-BY-NC-4.0',
             'CC-BY-NC-ND-4.0' => 'CC-BY-NC-ND-4.0',
             'POD-V4V-1.0'     => 'POD-V4V-1.0',
-            default           => 'All rights reserved'
+            default           => 'All rights reserved',
         };
 
         $channel->addChild('license', $licenseValue, RssFeed::PODCAST_NAMESPACE);

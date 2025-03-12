@@ -1,6 +1,7 @@
 {
   "name": "ad-aures/podcast-txt",
   "version": "0.1.0",
+  "minCastopodVersion": "2.0.0-next.3",
   "description": "Add freeform text, like a DNS TXT record.",
   "license": "AGPL-3.0-or-later",
   "repository": {
