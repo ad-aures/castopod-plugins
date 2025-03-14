@@ -4,6 +4,7 @@
   "minCastopodVersion": "2.0.0-next.3",
   "description": "A dummy plugin that pities the foo! It serves as a showcase for displaying every form field type and testing them out.",
   "license": "AGPL-3.0-or-later",
+  "submodule": true,
   "repository": {
     "url": "https://github.com/ad-aures/castopod-plugins",
     "directory": "foo"

@@ -4,6 +4,7 @@
   "minCastopodVersion": "2.0.0-next.3",
   "description": "Add code snippets in the `<head>` tag of all public pages: inject new meta tags, custom styles, or third-party scripts!",
   "license": "AGPL-3.0-or-later",
+  "submodule": true,
   "repository": {
     "url": "https://github.com/ad-aures/castopod-plugins",
     "directory": "custom-head"

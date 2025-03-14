@@ -4,6 +4,7 @@
   "minCastopodVersion": "2.0.0-next.3",
   "description": "Add multiple image resources for the podcast in your RSS feeds using `<podcast:images>`'s Podcasting2.0 tag.",
   "license": "AGPL-3.0-or-later",
+  "submodule": true,
   "repository": {
     "url": "https://github.com/ad-aures/castopod-plugins",
     "directory": "podcast-images"
